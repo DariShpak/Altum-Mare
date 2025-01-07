@@ -3,7 +3,74 @@
 }
 
 body {
-  font-family: "Jost", sans-serif;
+  font-family: "Nunito", serif;
   font-weight: 300;
   background-color: var(--bg-color);
+}
+
+.container {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link:visited {
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* header */
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
 }
