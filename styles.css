@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #fff;
+  --bg-color: #f1f1f1;
 }
 
 body {
@@ -98,6 +98,32 @@ img {
   font-size: 36px;
 }
 
+.cta-button {
+  width: 90px;
+  height: 90px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  border: transparent;
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: 6px 8px 15px 0px rgba(0, 0, 0, 0.15), -8px -6px 15px 0px #fff;
+  transition: box-shadow 0.35s ease-in-out;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: inset -8px -7px 10px #fff, inset 8px 7px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-img {
+  min-width: 372px;
+  background-color: var(--background-color);
+
+  border: 1px #f1f1f1 solid;
+  box-shadow: -7px -7px 15px 0px #fff, 7px 7px 15px 0px rgba(0, 0, 0, 0.12);
+}
 /* dreams section */
 
 .dreams-container {
