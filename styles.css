@@ -8,6 +8,25 @@ body {
   background-color: var(--bg-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .container {
   padding-left: 48px;
   padding-right: 48px;
@@ -91,11 +110,17 @@ img {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  max-width: 670px;
 }
 
 .hero-title {
   font-weight: 400;
-  font-size: 36px;
+  font-size: 40px;
+}
+
+.hero-text {
+  font-size: 18px;
 }
 
 .cta-button {
@@ -122,7 +147,13 @@ img {
   background-color: var(--background-color);
 
   border: 1px #f1f1f1 solid;
-  box-shadow: -7px -7px 15px 0px #fff, 7px 7px 15px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.moon-icons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 /* dreams section */
 
