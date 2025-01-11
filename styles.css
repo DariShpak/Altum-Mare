@@ -111,7 +111,7 @@ img {
   flex-direction: column;
   gap: 24px;
 
-  max-width: 670px;
+  max-width: 600px;
 }
 
 .hero-title {
