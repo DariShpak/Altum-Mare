@@ -1,5 +1,6 @@
 :root {
   --bg-color: #f1f1f1;
+  --accent-color: #e0ebee;
 }
 
 body {
@@ -30,6 +31,8 @@ body {
 .container {
   padding-left: 48px;
   padding-right: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
