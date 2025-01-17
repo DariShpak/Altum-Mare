@@ -1,12 +1,14 @@
 :root {
-  --bg-color: #f1f1f1;
-  --accent-color: #e0ebee;
+  --bg-color: #fff;
+  --dark-color: #1a403f;
+  --accent-color: #a3c5ba;
 }
 
 body {
-  font-family: "Nunito", serif;
+  font-family: "Montserrat", serif;
   font-weight: 300;
   background-color: var(--bg-color);
+  color:#1a403f;
 }
 
 .visually-hidden {
@@ -96,6 +98,12 @@ img {
   gap: 2rem;
 }
 
+.header-text{
+  font-size: 15px;
+  font-weight: 400;
+   letter-spacing: -1;
+}
+
 /* hero */
 
 .hero-container {
@@ -119,11 +127,14 @@ img {
 
 .hero-title {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -2;
 }
 
 .hero-text {
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 160%;
 }
 
 .cta-button {
