@@ -11,7 +11,7 @@ body {
   color: #1a403f;
 
   margin: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -46,13 +46,12 @@ body {
   width: 100vw; /* Ширина viewport */
   scroll-behavior: smooth; /* Плавна прокрутка */
   overflow-x: auto; /* Забезпечує горизонтальну прокрутку */
-  /* scroll-snap-type: x mandatory; Опціонально */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; 
 }
 
 .section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-
+  align-items: center;
   flex: none; /* Кожна секція займає однакову ширину */
   width: 100vw; /* Секція на всю ширину екрану */
   height: 100vh; /*Секція на всю висоту екрану */
@@ -101,6 +100,11 @@ img {
 
 .header {
   height: 80px;
+  position: fixed; /* Закріплення зверху */
+  top: 0;
+  left: 0;
+  width: 100%; /* На всю ширину екрану */
+  z-index: 10; /* Щоб перекривати інший контент */
 }
 
 .header-container {
