@@ -30,6 +30,21 @@ body {
   pointer-events: none;
 }
 
+.horizontal-scroll {
+  position: relative;
+  height: 100vh; /* Висота екрану */
+  overflow: hidden; /* Прибираємо скролбар */
+  background-color: #e0e0e0;
+}
+
+.horizontal-container {
+  display: flex; /* Горизонтальне розташування секцій */
+  height: 100%; /* Висота контейнера */
+  width: max-content; /* Ширина залежить від кількості секцій */
+  position: sticky;
+  top: 0;
+}
+
 .container {
   padding-left: 48px;
   padding-right: 48px;
@@ -40,6 +55,8 @@ body {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
+  flex: 0 0 100vw; /* Кожна секція займає ширину екрану */
+  height: 100%; /* Висота секції */
 }
 
 .link {
@@ -112,6 +129,7 @@ img {
 }
 
 .hero-section {
+  height: 100vh; /* Висота екрану */
   padding-top: 24px;
   padding-bottom: 96px;
 }
@@ -137,18 +155,24 @@ img {
 }
 
 .cta-button {
-  width: 90px;
-  height: 90px;
-
+  background-color: #fff;
   border-radius: 50%;
-  border: transparent;
-  text-align: center;
-  text-transform: uppercase;
 
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  padding: 11px 24px;
+  transition: background box-shadow 280ms ease;
 
-  transition: box-shadow 0.35s ease-in-out;
+  width: 80px;
+  height: 80px;
 }
 
 .cta-button:hover,
@@ -157,12 +181,17 @@ img {
   box-shadow: inset -8px -7px 10px #fff, inset 8px 7px 10px rgba(0, 0, 0, 0.15);
 }
 
-.hero-img {
+.hero-img-wrap {
   min-width: 372px;
-  background-color: var(--background-color);
 
+  background-color: var(--background-color);
+  border-radius: 24px;
   border: 1px #f1f1f1 solid;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.hero-img {
+  border-radius: 24px;
 }
 
 .moon-icons-list {
