@@ -227,7 +227,22 @@ img {
   height: 30px; /* Висота футера */
   z-index: 10;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.post-item{
+  display: flex;
+  gap: 48px;
+}
+
+.post-text-content{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+
+  text-align: justify;
+
 }
 
 @media (max-width: 768px) {
