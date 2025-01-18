@@ -99,7 +99,7 @@ img {
 
 .header-text {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: -1;
 }
 
@@ -109,6 +109,7 @@ img {
   display: flex;
   gap: 62px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .hero-section {
@@ -170,16 +171,30 @@ img {
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
-
-.moon-icons-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 /* dreams section */
 
-.dreams-container {
+.content-wrap {
   display: flex;
   gap: 96px;
   align-items: center;
+  justify-content: space-around;
+}
+
+.section-text-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 352px;
+  gap: 18px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -1;
+}
+
+.footer-container
+{
+  display: flex;
+  justify-content: space-between;
 }
