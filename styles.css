@@ -8,7 +8,7 @@ body {
   font-family: "Montserrat", serif;
   font-weight: 300;
   background-color: var(--bg-color);
-  color:#1a403f;
+  color: #1a403f;
 }
 
 .visually-hidden {
@@ -84,7 +84,6 @@ img {
 
 .header {
   padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .header-container {
@@ -98,10 +97,10 @@ img {
   gap: 2rem;
 }
 
-.header-text{
+.header-text {
   font-size: 15px;
   font-weight: 400;
-   letter-spacing: -1;
+  letter-spacing: -1;
 }
 
 /* hero */
@@ -147,8 +146,7 @@ img {
   text-transform: uppercase;
 
   background: #e0e0e0;
- box-shadow: 20px 20px 60px #bebebe,
-               -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 
   transition: box-shadow 0.35s ease-in-out;
 }
