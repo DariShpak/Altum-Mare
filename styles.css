@@ -9,9 +9,6 @@ body {
   font-weight: 300;
   background-color: var(--bg-color);
   color: #1a403f;
-
-  overflow: hidden; /* Забороняємо вертикальний скрол */
-  height: 100%; /* Встановлюємо висоту на весь екран */
 }
 
 .visually-hidden {
@@ -33,18 +30,6 @@ body {
   pointer-events: none;
 }
 
-.horizontal-scroll {
-  display: flex;
-  flex-wrap: nowrap; /* Забороняємо перенесення секцій на новий ряд */
-  height: 100vh; /* Висота контейнера дорівнює висоті екрану */
-}
-
-.horizontal-container {
-  display: flex;
-  width: max-content; /* Розтягуємо ширину відповідно до контенту */
-  height: 100%; /* Висота контейнера дорівнює висоті вікна */
-}
-
 .container {
   padding-left: 48px;
   padding-right: 48px;
@@ -55,8 +40,6 @@ body {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
-  flex: 0 0 100vw; /* Кожна секція займає ширину екрану */
-  height: 100%; /* Висота секції */
 }
 
 .link {
@@ -129,7 +112,6 @@ img {
 }
 
 .hero-section {
-  height: 100vh; /* Висота екрану */
   padding-top: 24px;
   padding-bottom: 96px;
 }
