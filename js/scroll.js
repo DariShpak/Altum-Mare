@@ -21,7 +21,7 @@ window.addEventListener("wheel", (event) => {
 
   animationFrame = requestAnimationFrame(() => {
     scrollContainer.scrollBy({
-      left: event.deltaY * 2,
+      left: event.deltaY * 1,
       behavior: "smooth"
     })
   })
@@ -31,7 +31,7 @@ const handleKeydown = throttle((event) => {
   if (event.key === "ArrowDown" || event.key === "ArrowUp") {
     const sectionWidth = scrollContainer.offsetWidth
     scrollContainer.scrollBy({
-      left: event.key === "ArrowDown" ? sectionWidth / 2 : -sectionWidth / 2,
+      left: event.key === "ArrowDown" ? sectionWidth / 1 : -sectionWidth / 1,
       behavior: "smooth"
     })
   }
