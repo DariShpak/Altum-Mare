@@ -1,19 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const horizontalScroll = document.querySelector(".horizontal-scroll")
-  const horizontalContainer = document.querySelector(".horizontal-container")
 
-  // Розрахунок загальної висоти сторінки
-  const horizontalWidth = horizontalContainer.scrollWidth
-  const totalHeight =
-    horizontalWidth - window.innerWidth + horizontalScroll.offsetHeight
+  // Розраховуємо ширину для горизонтального скролу
+  const scrollWidth = horizontalScroll.scrollWidth
+  document.body.style.height = `${scrollWidth}px` // Встановлюємо висоту тіла відповідно до ширини контенту
 
-  document.body.style.height = `${totalHeight}px` // Додаємо висоту сторінки
-
-  // Горизонтальний скрол
+  // Прив'язуємо вертикальний скрол до горизонтального
   window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY
-    const maxScroll = horizontalWidth - window.innerWidth
-    const offset = Math.min(scrollY, maxScroll) // Обмеження для запобігання переповненню
-    horizontalContainer.style.transform = `translateX(-${offset}px)`
+    const scrollY = window.scrollY // Отримуємо вертикальний скрол
+    horizontalScroll.scrollLeft = scrollY // Синхронізуємо його з горизонтальним
   })
 })
