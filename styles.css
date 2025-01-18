@@ -11,7 +11,7 @@ body {
   color: #1a403f;
 
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .visually-hidden {
@@ -45,6 +45,8 @@ body {
   height: 100vh; /* Висота viewport */
   width: 100vw; /* Ширина viewport */
   scroll-behavior: smooth; /* Плавна прокрутка */
+  overflow-x: auto; /* Забезпечує горизонтальну прокрутку */
+  /* scroll-snap-type: x mandatory; Опціонально */
 }
 
 .section {
@@ -53,7 +55,7 @@ body {
 
   flex: none; /* Кожна секція займає однакову ширину */
   width: 100vw; /* Секція на всю ширину екрану */
-  height: 100vh; /* Секція на всю висоту екрану */
+  height: 100vh; /*Секція на всю висоту екрану */
   display: flex;
 }
 
