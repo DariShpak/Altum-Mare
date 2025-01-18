@@ -10,6 +10,7 @@ body {
   background-color: var(--bg-color);
   color: #1a403f;
 
+  height: 100%; /* Висота вікна перегляду */
   margin: 0;
   overflow: hidden;
 }
@@ -42,19 +43,28 @@ body {
 
 .horizontal-scroll {
   display: flex; /* Розташування секцій горизонтально */
-  height: 100vh; /* Висота viewport */
+  height: calc(100vh - 110px); /* Висота між хедером і футером */
+  margin-top: 80px; /* Відступ для хедера */
+  margin-bottom: 30px; /* Відступ для футера */
   width: 100vw; /* Ширина viewport */
   scroll-behavior: smooth; /* Плавна прокрутка */
-  overflow-x: auto; /* Забезпечує горизонтальну прокрутку */
+  overflow-x: scroll;
+  overflow-y: hidden; /* Горизонтальна прокрутка */
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory; 
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Для браузера Firefox */
+  -ms-overflow-style: none; /* Для Internet Explorer */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Для браузерів на основі WebKit (Chrome, Edge, Safari) */
 }
 
 .section {
   align-items: center;
   flex: none; /* Кожна секція займає однакову ширину */
   width: 100vw; /* Секція на всю ширину екрану */
-  height: 100vh; /*Секція на всю висоту екрану */
+  height: 100%; /*Секція на всю висоту екрану */
   display: flex;
 }
 
@@ -215,6 +225,12 @@ img {
 }
 
 .footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Висота футера */
+  z-index: 10;
   display: flex;
   justify-content: space-between;
 }
