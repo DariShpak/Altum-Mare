@@ -9,6 +9,9 @@ body {
   font-weight: 300;
   background-color: var(--bg-color);
   color: #1a403f;
+
+  overflow: hidden; /* Забороняємо вертикальний скрол */
+  height: 100%; /* Встановлюємо висоту на весь екран */
 }
 
 .visually-hidden {
@@ -31,18 +34,15 @@ body {
 }
 
 .horizontal-scroll {
-  position: relative;
-  height: 100vh; /* Висота екрану */
-  overflow: hidden; /* Прибираємо скролбар */
-  background-color: #e0e0e0;
+  display: flex;
+  flex-wrap: nowrap; /* Забороняємо перенесення секцій на новий ряд */
+  height: 100vh; /* Висота контейнера дорівнює висоті екрану */
 }
 
 .horizontal-container {
-  display: flex; /* Горизонтальне розташування секцій */
-  height: 100%; /* Висота контейнера */
-  width: max-content; /* Ширина залежить від кількості секцій */
-  position: sticky;
-  top: 0;
+  display: flex;
+  width: max-content; /* Розтягуємо ширину відповідно до контенту */
+  height: 100%; /* Висота контейнера дорівнює висоті вікна */
 }
 
 .container {
