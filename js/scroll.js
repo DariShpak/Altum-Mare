@@ -1,41 +1,43 @@
 const scrollContainer = document.querySelector(".horizontal-scroll")
-const sectionWidth = scrollContainer.offsetWidth // Визначаємо ширину контейнера
-let isScrolling = false
+let animationFrame
 
-// Обробка події миші
-window.addEventListener("wheel", (event) => {
-  event.preventDefault() // Забороняємо стандартну прокрутку
-
-  if (!isScrolling) {
-    isScrolling = true
-
-    scrollContainer.scrollBy({
-      left: event.deltaY * 2, // Збільшений крок прокрутки
-      behavior: "smooth" // Плавна прокрутка
-    })
-
-    setTimeout(() => {
-      isScrolling = false
-    }, 50) // Менша затримка для швидшого відгуку
-  }
-})
-
-// Обробка події клавіатури
-window.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-    event.preventDefault() // Забороняємо вертикальну прокрутку
-
-    if (!isScrolling) {
-      isScrolling = true
-
-      scrollContainer.scrollBy({
-        left: event.key === "ArrowDown" ? sectionWidth / 2 : -sectionWidth / 2, // Прокрутка на половину секції
-        behavior: "smooth"
-      })
-
-      setTimeout(() => {
-        isScrolling = false
-      }, 100) // Затримка для клавіш
+function throttle(callback, delay) {
+  let lastTime = 0
+  return (...args) => {
+    const now = new Date().getTime()
+    if (now - lastTime >= delay) {
+      lastTime = now
+      callback(...args)
     }
   }
+}
+
+window.addEventListener("wheel", (event) => {
+  event.preventDefault()
+
+  if (animationFrame) {
+    cancelAnimationFrame(animationFrame)
+  }
+
+  animationFrame = requestAnimationFrame(() => {
+    scrollContainer.scrollBy({
+      left: event.deltaY * 2,
+      behavior: "smooth"
+    })
+  })
+})
+
+const handleKeydown = throttle((event) => {
+  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    const sectionWidth = scrollContainer.offsetWidth
+    scrollContainer.scrollBy({
+      left: event.key === "ArrowDown" ? sectionWidth / 2 : -sectionWidth / 2,
+      behavior: "smooth"
+    })
+  }
+}, 100)
+
+window.addEventListener("keydown", (event) => {
+  event.preventDefault()
+  handleKeydown(event)
 })
