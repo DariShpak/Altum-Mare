@@ -66,7 +66,7 @@ body {
   height: 100%; /*Секція на всю висоту екрану */
   display: flex;
 }
-
+a,
 .link {
   text-decoration: none;
   color: var(--text-color);
@@ -168,6 +168,9 @@ img {
 }
 
 .cta-button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
   background-color: #fff;
   border-radius: 50%;
 
@@ -181,7 +184,7 @@ img {
   font-family: inherit;
   letter-spacing: 0.25px;
   line-height: normal;
-  padding: 11px 24px;
+  padding: 40px 40px;
   transition: background box-shadow 280ms ease;
 
   width: 80px;
@@ -192,6 +195,10 @@ img {
 .cta-button:focus {
   border-color: rgba(255, 255, 255, 0.05);
   box-shadow: inset -8px -7px 10px #fff, inset 8px 7px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn{
+  margin-top: 96px;
 }
 
 /* dreams section */
